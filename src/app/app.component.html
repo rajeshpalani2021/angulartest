@@ -1,0 +1,22 @@
+
+<html>
+<body>
+
+<h3>{{ name}}</h3>
+
+ <div class="container">
+ <span *ngFor="let recipient of map | keyvalue;let i = index">
+   <span class="circle-desc" [class.circle-desc-active]="orderStatus == recipient.key">{{recipient.key}} </span>
+    <span class="circles" [class.active]="recipient.value"></span>
+   <span class="bar" *ngIf="(i != map.size-1)"></span>
+ </span>
+ 
+ <!-- <ul>
+ <li *ngFor="let recipient of map | keyvalue">
+     {{recipient.key}}  {{recipient.value}}
+ </li>
+</ul> -->
+ </div>
+
+ </body>
+ </html>
